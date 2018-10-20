@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xm.shiro.admin.mapper1.EBIADao">
+
+	<select id="list" resultType="com.xm.shiro.admin.entity.EBIAEntity">
+		select a.* from EX_BASE_INVEST_APPROVED a
+		where 1 = 1
+	</select>
+</mapper>

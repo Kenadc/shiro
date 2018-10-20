@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>userview</h1>
+<!-- <span shiro:authenticated="true" >
+      <span>欢迎您：<span th:text="${userInfo.realName}"></span></span>
+</span> -->
+<shiro:hasRole name="admin">
+    <button type="button" class="btn btn-outline btn-default">
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+    </button>
+</shiro:hasRole>
+</body>
+</html>

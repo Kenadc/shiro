@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <!-- 判断当前用户是否拥有指定的权限 -->
+    <shiro:hasPermission name="userInfo:view">
+        <span>查看</span>
+    </shiro:hasPermission>
+    <shiro:hasPermission name="userInfo:del">
+        <span>删除</span>
+    </shiro:hasPermission>
+    
+    <br>
+    
+    <!-- 判断当前用户是否拥有指定的角色 -->
+    <shiro:hasRole name="admin">
+        <span>角色admin</span>
+    </shiro:hasRole>
+    <shiro:hasRole name="user">
+        <span>角色user</span>
+    </shiro:hasRole>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xm.shiro.admin.mapper1.ApplyDao">
+
+	<select id="queryListByDeptId" resultType="com.xm.shiro.admin.entity.ApplyEntity">
+		select a.* from apply_info a
+		where deptid = #{deptid}
+	</select>
+	<select id="queryObject" resultType="com.xm.shiro.admin.entity.ApplyEntity">
+		select a.* from apply_info a
+		where sxid = #{sxid}
+	</select>
+	<select id="maxId" resultType="int">
+		SELECT CASE IFNULL(MAX(id),1) WHEN 1 THEN 1 ELSE MAX(id) + 1 END AS newmaxid FROM apply_info
+	</select>
+	
+	<update id="update" parameterType="com.xm.shiro.admin.entity.ApplyEntity">
+		update apply_info  
+		<set> 
+			 	sxid=#{sxid},
+			 	itemname=#{itemname},
+			 	userid=#{userid},
+			 	username=#{username},
+			 	password=#{password},
+			 	deptid=#{deptid},
+			 	status=#{status},
+			 	sqoption=#{sqoption}
+		</set>
+		where id = #{id}
+	</update>
+	<insert id="insert" parameterType="com.xm.shiro.admin.entity.ApplyEntity">
+		insert into apply_info
+		(
+		`id`,
+		`sxid`,
+		`itemname`,
+		`userid`,
+		`username`,
+		`password`,
+		`deptid`,
+		`status`,
+		`sqoption`
+		)
+		values
+		(
+		#{id,jdbcType=INTEGER},
+		#{sxid,jdbcType=VARCHAR},
+		#{itemname,jdbcType=VARCHAR},
+		#{userid,jdbcType=VARCHAR},
+		#{username,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{deptid,jdbcType=VARCHAR},
+		#{status,jdbcType=VARCHAR},
+		#{sqoption,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	
+</mapper> -->
